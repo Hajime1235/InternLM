@@ -11,11 +11,13 @@
 
 ##### 历程：
 
-![1712036936852](image/README/1712036936852.png)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/bee7fbda-b4a3-42dc-a789-617a69902ef7)
+
 
 ##### 体系：
 
-![1712036923107](image/README/1712036923107.png)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/fa39ee51-7469-4af0-aa5e-9a0f8ed28380)
+
 
 ##### InternLM2优势：
 
@@ -25,15 +27,18 @@
 
 从模型到应用：
 
-![1712037527966](image/README/1712037527966.png)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/556d821e-66ec-4b0b-a555-26a754a0621c)
+
 
 #### （三）全链条开放开源体系：
 
-![1712037535923](image/README/1712037535923.png)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/ef4178f5-1c12-4b48-b121-ffc314bd3097)
+
 
 ##### 1.数据集获取：
 
-![1712037542783](image/README/1712037542783.png)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/46e31511-5b39-4b5e-a7ce-4ec1dee03e59)
+
 
 ##### 2.预训练：
 
@@ -49,7 +54,8 @@
 
 ##### 4.评测：OpenCompass（最完善的国产大模型评测体系，已有广泛应用）
 
-![1712037557498](image/README/1712037557498.png)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/d11e9369-6609-467e-8f78-b6b6ff46dc81)
+
 1.提供中立全面的大模型榜单
 2.开源评测的各类工具：数据污染检查、推理模型接入、长文本能力评测、中英文双语主观评测
 3.评测基准社区：CompassHub
@@ -73,14 +79,16 @@
 
 ##### 5.部署：LMDeploy
 
-![1712037571903](image/README/1712037571903.png)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/627608ca-3db9-4abe-9133-be537bf8a9ae)
+
 
 交互式推理：对话
 非交互式推理：发送整个对话历史
 
 ##### 6.智能体：Lagent（轻量级）
 
-![1712037681187](image/README/1712037681187.png)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/65efd9ff-6105-4f90-8f5c-604c9e8b3749)
+
 
 通过Lagent框架：代码解题；零样本泛化
 多模态智能体工具箱AgentLego：工具集合
