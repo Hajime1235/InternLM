@@ -106,6 +106,7 @@ python /root/demo/cli_demo.py
 ## 2.实战部署优秀作品
 
 ### 2.1配置基础环境
+
 #### 进入conda环境：
 ```bash
 conda activate demo
@@ -119,7 +120,7 @@ git clone https://gitee.com/InternLM/Tutorial -b camp2
 cd /root/Tutorial
 ```
 
-#### 下载并运行优秀作品
+### 2.2下载并运行优秀作品
 ```bash
 python /root/Tutorial/helloworld/bajie_download.py
 ```
@@ -136,7 +137,130 @@ streamlit run /root/Tutorial/helloworld/bajie_chat.py --server.address 127.0.0.1
 # 将下方端口号 38374 替换成自己的端口号
 ssh -CNg -L 6006:127.0.0.1:6006 root@ssh.intern-ai.org.cn -p 38374
 ```
+在平台中查看端口、密码并填入
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/20b401f6-8a0f-45dc-bd64-4dac66f4b380)
+
 
 #### 打开 `http://127.0.0.1:6006` ,就可以对话了
 
+## 3.使用 Lagent 运行 InternLM2-Chat-7B 模型
 
+### 3.1 Lagent 框架图和特性
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/1534ab4a-83fe-4a8d-ba44-82e9ac19f402)
+#### 特性（不是很理解诶）：
+* 流式输出：提供 stream_chat 接口作流式输出，本地就能演示酷炫的流式 Demo。
+* 接口统一，设计全面升级，提升拓展性，包括：
+  * Model : 不论是 OpenAI API, Transformers 还是推理加速框架 LMDeploy 一网打尽，模型切换可以游刃有余；
+  * Action: 简单的继承和装饰，即可打造自己个人的工具集，不论 InternLM 还是 GPT 均可适配；
+  * Agent：与 Model 的输入接口保持一致，模型到智能体的蜕变只需一步，便捷各种 agent 的探索实现；
+* 文档全面升级，API 文档全覆盖。
+
+### 3.2 配置基础环境
+
+#### 进入conda环境：
+```bash
+conda activate demo
+```
+
+#### 打开文件子路径
+```bash
+cd /root/demo
+```
+
+下载 Lagent 相关的代码库（git 命令）：
+```bash
+git clone https://gitee.com/internlm/lagent.git
+# git clone https://github.com/internlm/lagent.git
+cd /root/demo/lagent
+git checkout 581d9fb8987a5d9b72bb9ebd37a95efd47d479ac
+pip install -e . # 源码安装
+```
+
+### 3.3 使用 Lagent 运行 InternLM2-Chat-7B 模型为内核的智能体
+#### 打开 lagent 路径：
+```bash
+cd /root/demo/lagent
+```
+
+#### 在 terminal 中输入指令，构造软链接快捷访问方式：
+```bash
+ln -s /root/share/new_models/Shanghai_AI_Laboratory/internlm2-chat-7b /root/models/internlm2-chat-7b
+```
+
+#### 打开 lagent 路径下 examples/internlm2_agent_web_demo_hf.py 文件，并修改对应位置 (71行左右) 代码：
+```bash
+# 其他代码...
+value='/root/models/internlm2-chat-7b'
+# 其他代码...
+```
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/1ea13469-6e16-42b6-aec5-9516cbbf582b)
+
+#### 输入运行命令(要等5分钟)
+```bash
+streamlit run /root/demo/lagent/examples/internlm2_agent_web_demo_hf.py --server.address 127.0.0.1 --server.port 6006
+```
+
+随后重复2.2的powershell步骤，输入密码后点开链接，勾上数据分析，其他的选项不要选择，进行计算方面的 Demo 对话。
+```bash
+请解方程 2*X=1360 之中 X 的结果
+```
+
+## 4. 实践部署 浦语·灵笔2（XComposer2，图文多模态大模型） 模型
+
+### 5.1 配置基础环境（50% A100）
+
+#### 进入conda环境：
+```bash
+conda activate demo
+# 补充环境包
+pip install timm==0.4.12 sentencepiece==0.1.99 markdown2==2.4.10 xlsxwriter==3.1.2 gradio==4.13.0 modelscope==1.9.5
+```
+
+#### 下载 InternLM-XComposer 仓库 相关的代码资源：
+```bash
+cd /root/demo
+git clone https://gitee.com/internlm/InternLM-XComposer.git
+# git clone https://github.com/internlm/InternLM-XComposer.git
+cd /root/demo/InternLM-XComposer
+git checkout f31220eddca2cf6246ee2ddf8e375a40457ff626
+```
+
+#### 在 terminal 中输入指令，构造软链接快捷访问方式：
+```bash
+ln -s /root/share/new_models/Shanghai_AI_Laboratory/internlm-xcomposer2-7b /root/models/internlm-xcomposer2-7b
+ln -s /root/share/new_models/Shanghai_AI_Laboratory/internlm-xcomposer2-vl-7b /root/models/internlm-xcomposer2-vl-7b
+```
+
+### 5.2图文写作实战
+
+#### 启动 InternLM-XComposer：
+
+```bash
+cd /root/demo/InternLM-XComposer
+python /root/demo/InternLM-XComposer/examples/gradio_demo_composition.py  \
+--code_path /root/models/internlm-xcomposer2-7b \
+--private \
+--num_gpus 1 \
+--port 6006
+```
+
+随后重复2.2的powershell步骤，输入密码后点开链接，进行使用。
+
+### 5.3 图片理解实战
+
+#### 关闭并重新启动一个新的 terminal，继续输入指令，启动 InternLM-XComposer2-vl ，并打开链接 `http://127.0.0.1:6006` 进行使用
+```bash
+conda activate demo
+
+cd /root/demo/InternLM-XComposer
+python /root/demo/InternLM-XComposer/examples/gradio_demo_chat.py  \
+--code_path /root/models/internlm-xcomposer2-vl-7b \
+--private \
+--num_gpus 1 \
+--port 6006
+```
+```bash
+请分析一下图中内容
+```
+
+# 结束
