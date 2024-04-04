@@ -101,4 +101,5 @@ powershell一直不成功，后来在群里求助，才知道要用cmd和鼠标�
 ![image](https://github.com/Hajime1235/InternLM/assets/165744158/6e6bf406-ae65-4db8-8e5e-924517ad5401)
 
 ## 5.Huggingface相关任务
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/b48d608e-ea6b-47c4-ba2e-6672fd647090)
 
