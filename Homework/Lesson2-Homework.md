@@ -51,4 +51,22 @@ powershell一直不成功，后来在群里求助，才知道要用cmd和鼠标�
 进入模型对话（这byd喜欢吃唐僧肉）：
 ![image](https://github.com/Hajime1235/InternLM/assets/165744158/7438f32b-ac01-4434-9f27-70615a78b98a)
 
+## 3. 使用 Lagent 运行 InternLM2-Chat-7B 模型
 
+### 3.1 配置基础环境
+安装conda环境，打开文件子路径，并下载Lagent代码库
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/9f939b5c-22a8-4f51-9e1e-ae92e8edc6c3)
+
+### 3.2 使用 Lagent 运行 InternLM2-Chat-7B 模型为内核的智能体
+
+改代码：
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/1cd131b7-27c5-4c95-86fb-e59700931013)
+
+加载模型：
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/0308e04a-94b1-4514-93eb-457be20a924e)
+
+使用模型：
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/e299b48b-4b62-4e13-96e1-292f8a6c0c51)
+它使用python代码来求解，面对非整数时还会四舍五入
+
+## 4. 实践部署 浦语·灵笔2 模型
