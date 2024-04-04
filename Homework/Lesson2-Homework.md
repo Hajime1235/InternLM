@@ -100,6 +100,6 @@ powershell一直不成功，后来在群里求助，才知道要用cmd和鼠标�
 使用模型：
 ![image](https://github.com/Hajime1235/InternLM/assets/165744158/6e6bf406-ae65-4db8-8e5e-924517ad5401)
 
-## 5.Huggingface相关任务
-![image](https://github.com/Hajime1235/InternLM/assets/165744158/b48d608e-ea6b-47c4-ba2e-6672fd647090)
+## 5.Huggingface下载大模型到本地
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/a8323322-f596-461a-9f57-777d6287311f)
 
