@@ -31,6 +31,37 @@ RAG（Retrieval Augmented Generation，增强型检索生成）技术，通过�
 
 ## 1. 环境配置
 
+#### 茴香豆工作原理
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/9bd72d2a-808b-4cd3-906f-c72ebf2be9c3)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/6f5faad2-6202-4229-af61-b7a3500cdb32)
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/3e9147ce-eaf0-48fc-8b03-a5d532f3cf24)
+
+#### 1.1 茴香豆Web版演示
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/4e683a02-30af-439e-891f-72a636ce5ea3)
+
+#### 1.2 把茴香豆部署到服务器上
+
+按往常进入开发机
+按教程配置环境，下载茴香豆
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/7b561cb9-3840-4e94-a83e-532fd27fe264)
+
 ## 2. 使用茴香豆搭建RAG助手
+
+#### 2.1 修改配置文件
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/19fc18d1-827a-48ac-bb15-040701b9bc0a)
+
+#### 2.2 创建知识库
+
+将茴香豆的相关语料下载至开发机
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/966cc643-890b-47a4-be25-495b7ef7876f)
+加入接受问题事例
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/a8499704-3e3c-466d-bcbe-65119d3c22bf)
+加入测试用的问询列表，测试拒答流程是否正常
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/2beb3042-1191-4dd2-9bc6-dd8adde9a2b8)
+创建RAG检索过程中使用的向量数据库，对事例问题进行向量化
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/a417d59a-e46d-4f7b-973f-63b7bb131811)
+
+#### 2.3 运行茴香豆
+![image](https://github.com/Hajime1235/InternLM/assets/165744158/bd0e10eb-5985-4112-a134-56833b0d6f98)
 
 ## 3. 茴香豆进阶
